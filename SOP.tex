@@ -1,0 +1,155 @@
+\documentclass[a4paper,11pt,oneside]{book}
+\usepackage[scaled]{helvet}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{hyperref}
+% Grafikpaket laden
+\usepackage{graphicx}
+\usepackage{float}
+%listen
+\usepackage{paralist} 
+
+%literatur
+\usepackage{csquotes}
+\usepackage[backend=biber, style=numeric-comp]{biblatex}
+\addbibresource{literatur.bib}
+
+
+
+% fusnote
+\usepackage{fancyhdr} %Paket laden
+\pagestyle{fancy} %eigener Seitenstil
+%tabelle
+\usepackage{booktabs}
+%nomenklatur
+\usepackage{nomencl}
+\makenomenclature
+%JSON
+\usepackage{listings}
+\usepackage{xcolor}
+\colorlet{punct}{red!60!black}
+\definecolor{background}{HTML}{EEEEEE}
+\definecolor{delim}{RGB}{20,105,176}
+\colorlet{numb}{magenta!60!black}
+\lstdefinelanguage{json}{
+    basicstyle=\normalfont\ttfamily,
+    numbers=left,
+    numberstyle=\scriptsize,
+    stepnumber=1,
+    numbersep=6pt,
+    showstringspaces=false,
+    breaklines=true,
+    frame=lines,
+    backgroundcolor=\color{background},
+    literate=
+     *{0}{{{\color{numb}0}}}{1}
+      {1}{{{\color{numb}1}}}{1}
+      {2}{{{\color{numb}2}}}{1}
+      {3}{{{\color{numb}3}}}{1}
+      {4}{{{\color{numb}4}}}{1}
+      {5}{{{\color{numb}5}}}{1}
+      {6}{{{\color{numb}6}}}{1}
+      {7}{{{\color{numb}7}}}{1}
+      {8}{{{\color{numb}8}}}{1}
+      {9}{{{\color{numb}9}}}{1}
+      {:}{{{\color{punct}{:}}}}{1}
+      {,}{{{\color{punct}{,}}}}{1}
+      {\{}{{{\color{delim}{\{}}}}{1}
+      {\}}{{{\color{delim}{\}}}}}{1}
+      {[}{{{\color{delim}{[}}}}{1}
+      {]}{{{\color{delim}{]}}}}{1},
+}
+%END JSON
+\usepackage{subcaption}
+%\captionsetup[subfigure]
+%{list=true, font=large, labelfont=bf, labelformat=brace, position=top}
+
+
+
+\author{Natasza Szczypien}
+\date{12. Januar 2016}
+
+
+\begin{document}
+\fancyhead[L]{}
+%\fancyhead[L] %Kopfzeile links
+\renewcommand{\headrulewidth}{0.4pt} %obere Trennlinie
+\fancyfoot[C]{\thepage} %Seitennummer
+\renewcommand{\footrulewidth}{0.4pt} %untere Trennlinie
+\renewcommand{\nomname}{Nomenklatur}
+
+
+\begin{titlepage}
+
+%-------LOGO
+\vspace*{-4.0cm}
+\hspace*{5.90cm}\includegraphics[scale=0.93]{img/Ostfalia_LS_RGB_klein.jpg}\\
+%--------------------------------------------------------------------------------
+\centering
+
+	%{\scshape\LARGE Ostfalia Hochschule für angewandte Wissenschaften \par}
+	\vspace{2cm}
+	
+	{\scshape\Large Fakultät Informatik\par}
+		\vspace{2cm}
+	{\scshape\LARGE \textbf{WS 18/19}\par}
+	\vspace{1cm}
+	{\huge\bfseries Software Engineering Projekt\par}
+	\vspace{1cm}
+	{\Large\itshape  Adam Jaffar, Kilian Dargel, Natasza Szczypien\par}
+	\vfill
+\begin{flushleft}
+{\large 
+	 Betreuer: Prof. Dr. Bernd Müller \par
+}
+\end{flushleft}
+	
+	%\vfill
+
+% Bottom of the page
+\vspace{2cm}
+\centering
+{\large 15. November 2017\par}
+
+\end{titlepage}
+\frontmatter
+
+
+\section*{ }
+\vspace{10cm}
+\begin{center}
+{\Large \textbf{Imagination is everything.}\par \textbf{It is the preview of life's coming attractions.}}
+\end{center} 
+ \begin{flushright}
+ Albert Einstein
+ \end{flushright}
+ \newpage
+
+\section{Abstrakt}
+\label{sec:abstrakt}
+
+
+
+
+
+\section{Abstract}
+ 
+\newpage
+
+
+
+\setcounter{tocdepth}{3}
+\tableofcontents
+
+%\newpage
+\mainmatter
+
+\input{Einleitung}
+
+
+\printbibliography[heading=bibintoc]
+\printnomenclature[5cm]
+
+\end{document}
